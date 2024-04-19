@@ -13,7 +13,7 @@
         android:theme="@style/Theme.AppCompat"
         tools:targetApi="31">
         <activity
-            android:name=".Tuan2.T22MainActivity"
+            android:name=".Tuan3.T3ListViewMainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,16 +22,19 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Tuan2.T22MainActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
             android:name=".Tuan2.T21MainActivityResult"
             android:exported="false" />
         <activity
             android:name=".Tuan2.T21MainActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false"></activity>
         <activity
             android:name=".Tuan1.T11MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
