@@ -1,4 +1,4 @@
-package com.example.myapplication.Tuan4
+package com.example.myapplication.Tuan5
 
 import android.R
 import android.content.Context
@@ -8,7 +8,7 @@ import com.android.volley.toolbox.JsonArrayRequest
 import com.android.volley.toolbox.Volley
 import org.json.JSONObject
 
-class T4VolleyListView {
+class T5VolleyListView {
     fun getAllData(context: Context, listView: ListView) {
         val url = "https://hungnttg.github.io/array_json_new.json"
         val dataList = ArrayList<String>()
@@ -18,16 +18,14 @@ class T4VolleyListView {
             url,
             { response ->
                 // Xử lý phản hồi thành công từ server
-
                 for (i in 0 until response.length()) {
-                    val person: JSONObject = response.getJSONObject(i)
-                    val id = person.getString("id")
-                    val name = person.getString("name")
-                    val email = person.getString("email")
-                    val address = person.getString("address")
+                    val product: JSONObject = response.getJSONObject(i)
+                    val name = product.getString("name")
+                    val gia = product.getString("email")
+
 
                     // Tạo chuỗi hiển thị thông tin
-                    val personInfo = "Id: $id\nName: $name\nEmail: $email\nAddress: $address\n"
+                    val personInfo = "Name: $name\nEmail: $gia\n"
                     dataList.add(personInfo)
                 }
 
